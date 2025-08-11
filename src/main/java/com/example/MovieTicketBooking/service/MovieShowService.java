@@ -86,7 +86,7 @@ public class MovieShowService
             for (MovieShow movieShow : movieShows) {
                 if (movieShow.getShowDate().isEqual(date)) {
                     MovieShowResponseDto dto = movieShowResponseDtoMapper.convertToMovieShowResponseDto(movieShow);
-                    response.getLast().add(dto);
+                    response.get(response.size() - 1).add(dto);
                 }
             }
         }
