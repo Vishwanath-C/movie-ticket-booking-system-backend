@@ -68,7 +68,7 @@ public class MovieShowService
 
             for (MovieShow movieShow : movieShows) {
                 MovieShowResponseDto dto = movieShowResponseDtoMapper.convertToMovieShowResponseDto(movieShow);
-                response.getLast().add(dto);
+                response.get(response.size() - 1).add(dto);
             }
         }
         return response;
